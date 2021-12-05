@@ -99,9 +99,9 @@
                     <systemProperties>
                         <baseUrl>https://api.inv.bg</baseUrl>
                         <apiVersion>/v3</apiVersion>
-                        <email>...</email>
-                        <password>............</password>
-                        <domain>...</domain>
+                        <email>ws1@abv.bg</email>
+                        <password>ws123</password>
+                        <domain>ws1</domain>
                     </systemProperties>
                 </configuration>
             </plugin>

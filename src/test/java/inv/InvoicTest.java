@@ -31,8 +31,8 @@ public class InvoicTest extends BaseAPITest {
         String[] paymentMethod ={"paypal"};
         Item item = new Item("Крушки", 20.00, "бр.", 10.0, "EUR",0,29.5,177,5);
         Item[] Items ={item};
-        Invoices invoiceItems=new Invoices("dan","Dona Joe","burgeria","Coona","ул. Климент Охридски № 125",
-                1230506989,true,"BG1234560800","Петър Страшимиров",false,821019421,"Иван Георгиев","BGN","bank",
+        Invoices invoiceItems=new Invoices("dan","Dona Joe","burgeria","Coona","address 1",
+                0101010101,true,"BG0000000000","Mol Mol",false,800000000,"rec Rec","BGN","bank",
                 paymentMethod,"paid",35,35,7,0,42, Items);
         Response createResponse = api.invoicesAPI().createInvoice(invoiceItems);
         Assertions.assertEquals(201, createResponse.statusCode());
@@ -45,8 +45,8 @@ public class InvoicTest extends BaseAPITest {
        String[] paymentMethod ={"paypal"};
        Item item = new Item("Крушки", 20.00, "бр.", 10.0, "EUR",0,29.5,177,5);
        Item[] Items ={item};
-       Invoices invoiceItems=new Invoices("dan","Възраждане АД","България","София","ул. Климент Охридски № 125",
-               1230506989,true,"BG1234560800","Петър Страшимиров",false,821019421,"Иван Георгиев","BGN","bank",
+       Invoices invoiceItems=new Invoices("dan","XXXXXAD","ББ","Town","address 125",
+               0000000000,true,"BG0000000000","mol mol",false,800000000,"Rec Rec","BGN","bank",
                paymentMethod,"Unpaid",35,35,7,0,425, Items);
        Response createResponse = api.invoicesAPI().createInvoice(invoiceItems);
        Assertions.assertEquals(201, createResponse.statusCode());

@@ -36,7 +36,7 @@ public class LoginPageTest extends BaseAPITest {
         //Creates new page instance
         page = browser.newPage();
         //Navigates to (Login page) in this case
-        page.navigate("https://work.inv.bg/login");
+        page.navigate("https://ws1.inv.bg/login");
     }
 
     @AfterEach
@@ -129,14 +129,14 @@ public class LoginPageTest extends BaseAPITest {
         String companyName = page.textContent(COMPANY_NAME_SELECTOR);
         //Assertions.assertEquals("QA Ground", companyName);
         //Enter email
-        page.fill(EMAIL_SELECTOR, "umnaalvi@gmail.com");
+        page.fill(EMAIL_SELECTOR, "ws1@abv.bg");
         //Enter password
-        page.fill(PASSWORD_SELECTOR, "Work@1234");
+        page.fill(PASSWORD_SELECTOR, "ws123");
         //Click Login button
         page.waitForNavigation(() -> {
             page.click(LOGIN_BTN_SELECTOR);
         });
         String loggedUser = page.textContent(USER_PANEL_SELECTOR);
-        Assertions.assertEquals("umnaalvi@gmail.com", loggedUser);
+        Assertions.assertEquals("ws1@abv.bg", loggedUser);
     }
 }

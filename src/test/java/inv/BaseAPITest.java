@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 public class BaseAPITest {
     private final static Logger LOGGER = LoggerFactory.getLogger(ClientAPITest.class);
     private final static TokenAPI tokenAPI = new TokenAPI("");
-    private static final String EMAIL = System.getProperty("email", "....");
-    private static final String PASSWORD = System.getProperty("password", "....");
-    private static final String DOMAIN = System.getProperty("domain", "....");
+    private static final String EMAIL = System.getProperty("email", "ws1@abv.bg");
+    private static final String PASSWORD = System.getProperty("password", "ws123");
+    private static final String DOMAIN = System.getProperty("domain", "ws1");
     protected static API api = null;
     protected final Gson GSON = new Gson().newBuilder()
             .setPrettyPrinting()
